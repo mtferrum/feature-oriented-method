@@ -1,0 +1,9 @@
+/Users/mt/optimizer/src/main/java/com/optimizer/util/JsonUtils.java
+/Users/mt/optimizer/src/main/java/com/optimizer/parser/StatisticsParser.java
+/Users/mt/optimizer/src/main/java/com/optimizer/model/OptimizationRequest.java
+/Users/mt/optimizer/src/main/java/com/optimizer/core/QueryOptimizer.java
+/Users/mt/optimizer/src/main/java/com/optimizer/parser/MetadataParser.java
+/Users/mt/optimizer/src/main/java/com/optimizer/SqlQueryOptimizer.java
+/Users/mt/optimizer/src/main/java/com/optimizer/model/SubQuery.java
+/Users/mt/optimizer/src/main/java/com/optimizer/model/OptimizationResult.java
+/Users/mt/optimizer/src/main/java/com/optimizer/splitter/QuerySplitter.java
