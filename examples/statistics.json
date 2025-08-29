@@ -1,0 +1,36 @@
+{
+  "tables": [
+    {
+      "name": "employees",
+      "rowCount": 1000,
+      "columnStats": [
+        {"name": "id", "distinctValues": 1000, "nullCount": 0},
+        {"name": "name", "distinctValues": 950, "nullCount": 0},
+        {"name": "department_id", "distinctValues": 10, "nullCount": 0},
+        {"name": "salary", "distinctValues": 500, "nullCount": 0},
+        {"name": "hire_date", "distinctValues": 365, "nullCount": 0}
+      ]
+    },
+    {
+      "name": "departments",
+      "rowCount": 10,
+      "columnStats": [
+        {"name": "id", "distinctValues": 10, "nullCount": 0},
+        {"name": "name", "distinctValues": 10, "nullCount": 0},
+        {"name": "location", "distinctValues": 5, "nullCount": 0}
+      ]
+    },
+    {
+      "name": "orders",
+      "rowCount": 5000,
+      "columnStats": [
+        {"name": "id", "distinctValues": 5000, "nullCount": 0},
+        {"name": "employee_id", "distinctValues": 800, "nullCount": 0},
+        {"name": "order_date", "distinctValues": 730, "nullCount": 0},
+        {"name": "amount", "distinctValues": 2000, "nullCount": 0},
+        {"name": "status", "distinctValues": 4, "nullCount": 0}
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,16 @@
+{
+  "originalQuery" : "SELECT e.name, d.name, COUNT(o.id) FROM employees e JOIN departments d ON e.department_id = d.id LEFT JOIN orders o ON e.id = o.employee_id GROUP BY e.id, e.name, d.name",
+  "subQueries" : [ {
+    "id" : "Q1",
+    "sql" : "SELECT * FROM (rel#0:LogicalTableScan.NONE.[](table=[employees]))",
+    "cost" : 100.0,
+    "dependencies" : [ ],
+    "temporaryTableName" : null,
+    "description" : "Подзапрос Q1 со стоимостью 100.0",
+    "temporaryTable" : false
+  } ],
+  "totalCost" : 100.0,
+  "optimizationPlan" : "=== ПЛАН ОПТИМИЗАЦИИ ===\nОптимизированное дерево операций:\nrel#0:LogicalTableScan.NONE.[](table=[employees])\n\nРазбиение на подзапросы:\nПодзапрос 1 (ID: Q1):\n  Стоимость: 100.00\n  SQL: SELECT * FROM (rel#0:LogicalTableScan.NONE.[](table=[employees]))\n\n",
+  "success" : true,
+  "errorMessage" : null
+}

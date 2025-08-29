@@ -1,0 +1,16 @@
+{
+  "originalQuery" : "SELECT \n    e.name as employee_name,\n    d.name as department_name,\n    COUNT(o.id) as order_count,\n    AVG(o.amount) as avg_order_amount\nFROM employees e\nJOIN departments d ON e.department_id = d.id\nLEFT JOIN orders o ON e.id = o.employee_id\nWHERE e.salary > 50000\n    AND o.order_date >= '2023-01-01'\nGROUP BY e.id, e.name, d.name\nHAVING COUNT(o.id) > 5\nORDER BY avg_order_amount DESC\nLIMIT 100\n",
+  "subQueries" : [ {
+    "id" : "Q1",
+    "sql" : "SELECT * FROM (rel#0:LogicalTableScan.NONE.[](table=[employees]))",
+    "cost" : 100.0,
+    "dependencies" : [ ],
+    "temporaryTableName" : null,
+    "description" : "Подзапрос Q1 со стоимостью 100.0",
+    "temporaryTable" : false
+  } ],
+  "totalCost" : 100.0,
+  "optimizationPlan" : "=== ПЛАН ОПТИМИЗАЦИИ ===\nОптимизированное дерево операций:\nrel#0:LogicalTableScan.NONE.[](table=[employees])\n\nРазбиение на подзапросы:\nПодзапрос 1 (ID: Q1):\n  Стоимость: 100.00\n  SQL: SELECT * FROM (rel#0:LogicalTableScan.NONE.[](table=[employees]))\n\n",
+  "success" : true,
+  "errorMessage" : null
+}
